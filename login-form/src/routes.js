@@ -1,4 +1,6 @@
 import VueRouter from 'vue-router';
+
+import form from './components/forma.vue';
 import cards from './components/cards.vue';
 // import matches from './src/components/matches.vue';
 // import groups from './src/components/groups.vue';
@@ -9,7 +11,8 @@ import cards from './components/cards.vue';
 export default new VueRouter({
     routes: [
 
-        {path: '/cards', component: cards}
+        {path: '/cards', component: cards},
+        {path: '/form', component: form}
 
 
     ]
