@@ -1,5 +1,7 @@
 <template>
   <div id="app">
+    <router-link to='/cards'>cards</router-link>
+    <router-view></router-view>
     <forma/>
   </div>
 </template>
