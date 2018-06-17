@@ -15,15 +15,6 @@ Of course, the button label should change appropriately.
  -->
 <div id='wrap'>
 
-   <div id='nav'>
-     <ul>
-       <li> <a href=""></a> HOME </li>
-       <li> <a href=""></a> ABOUT </li>
-       <li> <a href=""></a> CONTACT </li>
-    </ul>
-  </div>
-
-
   <div id='cards'
       v-bind:key="one.name" 
       v-for="one in info">
@@ -46,12 +37,15 @@ Of course, the button label should change appropriately.
 
 <script>
 
-
+import navigation from './navigation'
 //https://api.myjson.com/bins/17skk6
 
 export default {
+     name: 'home',
+     comments: {
+       navigation
+     },
 
-  name: 'cards',
 
   data() {
 
@@ -78,29 +72,6 @@ export default {
   background: black;
   color: white;
 }
-
-#nav ul {
-  display: flex;
-  justify-content: center;
-  background: lightgray;
-  color: black;
-  /* padding-top: 10px;
-  padding-bottom: 10px; */
-  padding: 0px 10px;
-}
-
-
-#nav ul li {
-/* margin-left: 5%; */
-padding: 35px;
-float: left;
-list-style-type: none;
-}
-#nav ul li a {
-  text-decoration: none;
-}
-
-
 
 #cards{
   clear: both;

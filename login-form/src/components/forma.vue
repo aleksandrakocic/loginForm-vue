@@ -23,7 +23,7 @@
 
                 <label for="password">Password</label>
                 <a href="#" @click="showPassword" id="show"> <img src="show1.png" alt=""></a>
-                <input :type="passwordtype" name="password" id="password">
+                <input :type="passwordtype" name="password" id="password" v-model="password">
                 <p>{{passwordError}}</p>
 
                 <input id='submit' type="submit" value="Log in">
@@ -58,6 +58,14 @@ export default {
 
   methods: {
 
+    showPassword: function showPassword() {
+            if (this.passwordtype == 'password') {
+                this.passwordtype = 'text';
+            } else {
+                this.passwordtype = 'password';
+              }
+    },
+
     formValidation: function formValidation(event) {
       
       event.preventDefault();
@@ -69,32 +77,23 @@ export default {
         this.emailError = 'not an email';
       }else{
         this.emailError = '';
-      };
+      }
 
 
       if(this.password == '')  {
         this.passwordError = 'required!';
       } if ( this.password.length < 8) {
-        this.passwordError = 'minimum 8'
+        this.passwordError = 'minimum 8';
       }else {
         this.passwordError = '';
+        this.$router.push({ path: '/home' })
       }
     },
 
     emailValidation: function emailValidation() {
       var regexEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       return regexEmail.test(this.email);
-    },
-
-    showPassword: function showPassword() {
-            if (this.passwordtype == 'password') {
-                this.passwordtype = 'text';
-            } else {
-                this.passwordtype = 'password';
-              }
     }
-   
-
   }
 }
 </script>
