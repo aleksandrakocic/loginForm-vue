@@ -1,9 +1,9 @@
 <template>
    <div id='nav'>
      <ul>
-       <li> <a href=""></a> HOME </li>
-       <li> <a href=""></a> ABOUT </li>
-       <li> <a href=""></a> CONTACT </li>
+       <li> <a href="">HOME</a></li>
+       <li> <a href="">ABOUT</a></li>
+       <li> <a href="">CONTACT</a> </li>
     </ul>
   </div>
 

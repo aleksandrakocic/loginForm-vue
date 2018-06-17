@@ -69,8 +69,8 @@ export default {
 <style>
 
 #wrap{
-  background: black;
-  color: white;
+  background: transparent;
+  color: #6600ff;
 }
 
 #cards{

@@ -1,6 +1,5 @@
 <template>
     <div>
-        <p> radis </p>
        <navigation></navigation>
        <cards></cards>
     </div>

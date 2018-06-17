@@ -26,7 +26,7 @@
                 <input :type="passwordtype" name="password" id="password" v-model="password">
                 <p>{{passwordError}}</p>
 
-                <input id='submit' type="submit" value="Log in">
+                <button id='submit'>Log in</button>
 
           </form>
 
@@ -44,6 +44,9 @@
 export default {
 
   name: 'forma',
+  comments: {
+    // forma
+  },
 
   data() {
   
@@ -107,7 +110,8 @@ export default {
   height: 80vh;
   display: flex;
   justify-content: center;
-  background: #dfe0e3;
+  /* background: #dfe0e3; */
+  background: transparent;
   padding-top: 50px;
 }
 

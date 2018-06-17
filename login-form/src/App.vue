@@ -1,14 +1,10 @@
 <template>
-  <div id="app">
 
-    <!-- <router-link to='/cards'>cards</router-link>
-    
-    <router-link to='/form'></router-link> -->
-    <button @click='changeTheme'>chenge theme</button>
-    
+    <div id="app" v-bind:class="{mode: mode}">
+    <button id='change' @click="changeM">change mode</button>
+
     <router-view></router-view>
 
-    <forma/>
   </div>
   
 </template>
@@ -21,6 +17,24 @@ export default {
   components: {
      forma,
      home
+  },
+
+  data() {
+
+    return{
+      mode: false
+    }
+  },
+
+  methods:{
+
+    changeM(){
+    if(this.mode == false){
+      return this.mode = true
+    }else{
+      return this.mode = false
+    }
+ }
   }
 }
 </script>
@@ -29,4 +43,51 @@ export default {
 #app {
   font-family: Helvetica, Arial, sans-serif;
 }
+
+#change {
+  height: 50px;
+  width:  150px;
+  font-size: 15px;
+  font-weight: 800;
+  background: transparent;
+
+}
+
+.mode #change {
+  color: gray;
+}
+
+.mode{
+  background: black;
+  color: red;
+}
+
+.mode .text{
+  background: black;
+  color: white;
+}
+
+.mode .text h1 {
+  color: gray;
+}
+
+.mode .form form label{
+  color: black;
+}
+
+.mode .form form #submit {
+  background: black;
+  color: white;
+}
+
+.mode #nav ul {
+  background: black;
+}
+
+.mode #wrap {
+  color: gray;
+}
+
+
+
 </style>
