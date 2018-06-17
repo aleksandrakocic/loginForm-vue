@@ -25,10 +25,8 @@ Of course, the button label should change appropriately.
         <li><p id='desc'>{{one.description}}</p></li>
       </ul>
   </div>
+
 </div>
-
-
-
 
 </template>
 
@@ -38,14 +36,12 @@ Of course, the button label should change appropriately.
 <script>
 
 import navigation from './navigation'
-//https://api.myjson.com/bins/17skk6
 
 export default {
      name: 'home',
      comments: {
        navigation
      },
-
 
   data() {
 
@@ -55,7 +51,7 @@ export default {
     }
   },
 
-    mounted () {
+  mounted () {
       this.axios
         .get('https://api.myjson.com/bins/17skk6')
         .then(response => (this.info =response.data))

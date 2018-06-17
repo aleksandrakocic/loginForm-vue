@@ -1,8 +1,12 @@
 <template>
+
     <div>
+
        <navigation></navigation>
        <cards></cards>
+
     </div>
+
 </template>
 
 <script>
@@ -17,6 +21,7 @@
             cards
         }
     }
+    
 </script>
 
 <style>

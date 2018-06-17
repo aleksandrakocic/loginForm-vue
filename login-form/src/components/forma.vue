@@ -45,7 +45,7 @@ export default {
 
   name: 'forma',
   comments: {
-    // forma
+  
   },
 
   data() {
@@ -110,7 +110,6 @@ export default {
   height: 80vh;
   display: flex;
   justify-content: center;
-  /* background: #dfe0e3; */
   background: transparent;
   padding-top: 50px;
 }
@@ -157,7 +156,6 @@ export default {
 #show img{
   width: 20px;
   height: 15px;
-  /* float: left; */
   margin-right: 30px;
   margin-left: 10px;
 }
@@ -167,7 +165,6 @@ export default {
   display: block;
   width: 200px; 
   border: none;
-  /* border: none; */
 }
 
 
